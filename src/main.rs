@@ -10,11 +10,6 @@ fn main() {
         std::process::exit(1);
     });
 
-    println!(
-        "Searching for string \"{}\" in file {}",
-        config.query, config.filename
-    );
-
     if let Err(e) = minigrep::run(config) {
         println!("Application error: {}", e);
         std::process::exit(1);
